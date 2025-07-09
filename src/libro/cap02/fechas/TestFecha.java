@@ -17,7 +17,7 @@ public class TestFecha {
         System.out.println("Anio "+f.getAnio());
         
         
-        Fecha f1 = new Fecha(12,12,2012);
+        Fecha f1 = new Fecha("12/12/2012");
         
         System.out.println("Fecha "+f);
         System.out.println("Fecha "+f);

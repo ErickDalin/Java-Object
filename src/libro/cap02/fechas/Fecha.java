@@ -7,13 +7,28 @@ public class Fecha {
     private int mes;
     private int anio;
     
+    //contructor nulo o vacio
     public Fecha(){  
     
     }
+    
+    //constructor que recibe enteros 
     public Fecha(int dia, int mes, int anio){
         this.dia = dia;
         this.mes = mes;
         this.anio = anio;
+    }
+    
+    //constructor que recibe String
+    public Fecha(String str){
+        // 15/06/1973
+        int pos1 = str.indexOf("/");
+        int pos2 = str.lastIndexOf("/");
+        
+        dia = Integer.parseInt(str.substring(0,pos1));
+        mes = Integer.parseInt(str.substring(pos1+1, pos2));
+        anio = Integer.parseInt(str.substring(pos2+1));
+        
     }
     
     //Sobreescribimos el metodo toString
